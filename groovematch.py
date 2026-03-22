@@ -43,6 +43,9 @@ from RB_Tree import RedBlackTree
 
 matplotlib.use("Agg")  # non-interactive backend (safe for Kaggle / terminal)
 
+# "top_k_scores" could not render non english characters by default, so we set a font family that includes support
+plt.rcParams["font.family"] = ["Segoe UI", "Malgun Gothic", "Meiryo", "DejaVu Sans", "sans-serif"]
+
 
 # ══════════════════════════════════════════════════════════════════════════════
 # 1 · CONFIGURATION & CONSTANTS
