@@ -72,7 +72,7 @@ TEXT_COLOR   = "#FFFFFF"
 ACCENT       = "#535353"
 
 
-DEFAULT_SEED = "Jewelry"
+DEFAULT_SEED = "Bohemian Rhapsody"
 TOP_K        = 10
 
 
