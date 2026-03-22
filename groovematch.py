@@ -38,6 +38,8 @@ import pandas as pd
 import matplotlib
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import MinMaxScaler, normalize
+from RB_Tree import RedBlackTree
+
 
 matplotlib.use("Agg")  # non-interactive backend (safe for Kaggle / terminal)
 
@@ -67,7 +69,7 @@ TEXT_COLOR   = "#FFFFFF"
 ACCENT       = "#535353"
 
 
-DEFAULT_SEED = "Bohemian Rhapsody"
+DEFAULT_SEED = "Jewelry"
 TOP_K        = 10
 
 
@@ -670,7 +672,7 @@ def main():
     # ── Benchmarking ──────────────────────────────────────────────────────────
     # Swap _StubTree() with SplayTree() / RedBlackTree() when available
     splay_tree = _StubTree()
-    rb_tree    = _StubTree()
+    rb_tree    = RedBlackTree()
 
     benchmark_results = run_benchmark(scored_pairs, splay_tree, rb_tree, k=TOP_K)
     benchmark_df      = benchmark_to_dataframe(benchmark_results)
