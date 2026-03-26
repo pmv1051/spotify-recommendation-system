@@ -39,6 +39,8 @@ import matplotlib
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import MinMaxScaler, normalize
 from RB_Tree import RedBlackTree
+from Splay_Tree import SplayTree
+
 
 
 matplotlib.use("Agg")  # non-interactive backend (safe for Kaggle / terminal)
@@ -674,7 +676,7 @@ def main():
 
     # ── Benchmarking ──────────────────────────────────────────────────────────
     # Swap _StubTree() with SplayTree() / RedBlackTree() when available
-    splay_tree = _StubTree()
+    splay_tree = SplayTree()
     rb_tree    = RedBlackTree()
 
     benchmark_results = run_benchmark(scored_pairs, splay_tree, rb_tree, k=TOP_K)
