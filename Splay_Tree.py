@@ -1,26 +1,35 @@
 # Splay Tree implementation by Jenish
 
 class Node:
-    def __init__(self, key):
+    def __init__(self, score, index):
 
-        self.key = key
+        self.score = score
+        self.index = index
+
+        self.right = None
         self.left = None
-        Self.right = None
+        self.parent = None
+
 
 class SplayTree:
 
-    #insert constructor
+    # constructor skeleton
+    def __init__(self):
+    
+        self.root = None
 
-    def splay(root, key):
-        if root is None :
-            return new_node(key)
-        
-        if root.key == key:
+    def insert(self, score, index):
+        #insert logic
 
-            return root
-        
-        if root.key > key:
-            if root.left is None:
-                return root
-            
-            #continue implementation
+    def left_rotate(self, x):
+        #left rotation logic
+
+    def right_rotate(self, x):
+        #right rotation logic
+
+    def top_k(self, k):
+
+    def splay(self, x):
+
+    
+    
