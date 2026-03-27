@@ -1,10 +1,12 @@
-"""
-use thhese and run in the terminal
-    python groovematch.py
-    python groovematch.py "<seed_song>"
 
-notebook converted to a .py file
-"""
+# groovematch.py from jason
+# this is an updated version from my MAD2502 capstone project fit to this project, used claude to convert notebook to a .py file
+#use thhese and run in the terminal
+#    python groovematch.py
+#    python groovematch.py "<seed_song>"
+
+#notebook converted to a .py file
+
 import os, sys, time, heapq, statistics, tracemalloc
 from math import pi
 
