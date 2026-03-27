@@ -1,4 +1,5 @@
 """
+use thhese and run in the terminal
     python groovematch.py
     python groovematch.py "<seed_song>"
 
@@ -390,9 +391,6 @@ def main():
         benchmark_df = benchmark_df,
         output_dir   = "groovematch_plots",
     )
-
-    print("\n[done] GrooveMatch pipeline complete.")
-
 
 if __name__ == "__main__":
     main()
