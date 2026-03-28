@@ -119,22 +119,21 @@ class SplayTree:
 
         
 
-    def sort_inorder(self, node, result, k):
-        if node is None or len(result) >= k:
-            return
-
-        #resursive right for largest val
-        self.sort_inorder(node.right, result, k)
-
-        if len(result) < k:
-            result.append((node.score, node.index))
-
-        #recursive left
-        self.sort_inorder(node.left, result, k)
-
     def top_k(self, k):
+        # iterative reverse in-order (right -> node -> left)
+        # avoids RecursionError on trees
         result = []
-        self.sort_inorder(self.root, result, k)
+        stack = []
+        node = self.root
+
+        while (stack or node is not None) and len(result) < k:
+            while node is not None:
+                stack.append(node)
+                node = node.right
+
+            node = stack.pop()
+            result.append((node.score, node.index))
+            node = node.left
 
         return result
     
