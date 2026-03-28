@@ -43,8 +43,7 @@ Or with a custom seed song:
 python groovematch.py "Blinding Lights"
 ```
 
-On first run, the Spotify dataset will be downloaded automatically via kagglehub (~230k tracks). Subsequent runs use the cached version.
-
+On first run, the Spotify dataset will be downloaded automatically via kagglehub (~230k tracks).
 ---
 
 ## Output
