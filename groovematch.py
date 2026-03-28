@@ -338,20 +338,8 @@ def generate_all_plots(df, scored_pairs, results_df, seed_name, seed_idx, benchm
     print(f"\n[viz] All plots saved to: {output_dir}/")
 
 
-class _StubTree:
-    def __init__(self):
-        self._heap = []
-
-    def insert(self, score, idx):
-        heapq.heappush(self._heap, (-score, idx))
-
-    def top_k(self, k):
-        heap_copy = self._heap[:]
-        out = []
-        for _ in range(min(k, len(heap_copy))):
-            neg_s, i = heapq.heappop(heap_copy)
-            out.append((-neg_s, i))
-        return out
+from Splay_Tree import SplayTree
+from RB_Tree import RedBlackTree
 
 
 def main():
@@ -383,8 +371,8 @@ def main():
     for _, row in results_df.iterrows():
         print(f"  {row['rank']:>2}. {row['track_name']:<35} – {row['artist_name']:<25} [{row['similarity_score']:.4f}]")
 
-    splay_tree = _StubTree()
-    rb_tree    = _StubTree()
+    splay_tree = SplayTree()
+    rb_tree    = RedBlackTree()
 
     benchmark_results = run_benchmark(scored_pairs, splay_tree, rb_tree, k=TOP_K)
     benchmark_df      = benchmark_to_dataframe(benchmark_results)
