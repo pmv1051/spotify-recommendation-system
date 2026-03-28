@@ -19,6 +19,11 @@ from sklearn.preprocessing import MinMaxScaler, normalize
 
 matplotlib.use("Agg")
 
+
+# "top_k_scores" could not render non english characters by default, so we set a font family that includes support
+plt.rcParams["font.family"] = ["Segoe UI", "Malgun Gothic", "Meiryo", "DejaVu Sans", "sans-serif"]
+
+
 AUDIO_FEATURES = ["acousticness","danceability","energy","instrumentalness",
                    "liveness","loudness","speechiness","tempo","valence"]
 
