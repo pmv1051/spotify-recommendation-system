@@ -17,6 +17,9 @@ import matplotlib
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import MinMaxScaler, normalize
 
+from Splay_Tree import SplayTree
+from RB_Tree import RedBlackTree
+
 matplotlib.use("Agg")
 
 
@@ -338,8 +341,7 @@ def generate_all_plots(df, scored_pairs, results_df, seed_name, seed_idx, benchm
     print(f"\n[viz] All plots saved to: {output_dir}/")
 
 
-from Splay_Tree import SplayTree
-from RB_Tree import RedBlackTree
+
 
 
 def main():
